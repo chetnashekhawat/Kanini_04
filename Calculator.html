@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="icon" type="image/x-icon" href="c1.jpg">
+    
+
+    <script>
+
+function calculate() {
+      var input1 = parseFloat(document.getElementById("input1").value);
+      var input2 = parseFloat(document.getElementById("input2").value);
+      var operator = document.getElementById("opera").value;
+      var result;
+      switch (operator) {
+        case "addition":
+          result = input1 + input2;
+          break;
+        case "subtraction":
+          result = input1 - input2;
+          break;
+        case "multiplication":
+          result = input1 * input2;
+          break;
+        case "division":
+          result = input1 / input2;
+          break;
+      }
+      document.getElementById("result").value = result;
+    }
+
+    function clearValues(){
+
+      document.getElementById("input1").value = "";
+      document.getElementById("input2").value = "";
+      document.getElementById("result").value = "";
+    }
+
+    </script>
+</head>
+<body>
+   <fieldset>
+    <legend> Simple Calculator</legend>
+    <img src="calc.jpg" alt="Calculator" height="200px">
+    <form name="calci" action="">
+
+        <label for="input1">Input 1:</label>
+        <input type="text" id="input1" value=""><br>
+        <br><label for="input2">Input 2:</label>
+        <input type="text" id="input2" value=""><br>
+        
+        <br><label for="opera">Select a Operation:</label>
+        <select name="opera" id="opera">
+          <option value="addition">addition</option>
+          <option value="subtraction">subtraction</option>
+          <option value="multiplication">multiplication</option>
+          <option value="division">division</option>
+        </select><br>
+
+        <br><label for="result">Result is:</label>
+        <input type="text" id="result" value=""><br>
+
+    </form>
+   
+    <br>
+    <table>
+        <th align ="center">
+            <td> <button type="button" onclick="clearValues();"><img src="reset.JPG" alt="reset" height="85px"></button></td>
+            <td><button type="button" onclick="calculate();"><img src="submit.png" alt="submit" height="85px" ></button></td>
+        </th>
+    </table>
+    <a href="Bookform.html">CLICK HERE</a>
+    <br><br>
+    
+   </fieldset> 
+</body>
+</html>
